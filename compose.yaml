@@ -3,9 +3,11 @@ services:
   adsbtelegramnotify:
     image: adsbtelegramnotify:latest
     container_name: adsbtelegramnotify
+    privileged: true
     environment:
       - TZ=Africa/Johannesburg
     volumes:
       - /opt/adsbtelegramnotify/config.php:/usr/src/myapp/includes/config.php:ro
-      - /opt/adsbtelegramnotify/dump1090-fa/:/run/readsb/:ro
+      - /opt/adsbtelegramnotify/dump1090-fa/:/usr/src/myapp/readsb/:ro
+    tty: true
     restart: unless-stopped

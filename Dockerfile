@@ -1,13 +1,12 @@
 FROM php
 LABEL maintainer "Die Peter Pan <diepeterpan@gmail.com>"
 
-RUN apt-get update && apt-get install -y curl cron bash nano
+RUN apt-get update && apt-get install -y curl selinux-policy-default systemd init bash nano
 
 COPY . /usr/src/myapp
 WORKDIR /usr/src/myapp
 
-COPY cronfile /etc/cron.d/cronfile
-RUN chmod 0644 /etc/cron.d/cronfile
-RUN crontab /etc/cron.d/cronfile
+RUN ln -f -s /usr/src/myapp/adsbTelegramNotifierDocker.service /etc/systemd/system/adsbTelegramNotifierDocker.service
+RUN systemctl enable adsbTelegramNotifierDocker 
 
-ENTRYPOINT ["/usr/sbin/cron", "-f"]
+CMD ["/sbin/init"]
