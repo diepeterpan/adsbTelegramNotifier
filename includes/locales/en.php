@@ -13,6 +13,8 @@ $lang['sendMessage']['ok'] = 'Successfully sent.';
 $lang['sendMessage']['failed'] = 'Failed to send.';
 $lang['sendMessage']['testMessage'] = 'Test Message!';
 $lang['done'] = 'Done.';
+$lang['decimalSeparator'] = '.';
+$lang['thousandsSeparator'] = ',';
 
 /**
  * includes/functions/checkVersion.php
@@ -78,4 +80,9 @@ $lang['notifier']['aircraftCoordinates'] = "Coordinates: %s, %s\n";
 $lang['notifier']['aircraftCoordinatesLinked'] = "Coordinates: [%s, %s](%s)\n";
 $lang['notifier']['aircraftAlt'] = "Altitude: %s%s\n";
 $lang['notifier']['planespottersNote'] = "\n[Photo](%s) by %s";
+
+/**
+ * Execution time
+ */
+$lang['notifier']['executionTime'] = 'Execution time: ';
 ?>
