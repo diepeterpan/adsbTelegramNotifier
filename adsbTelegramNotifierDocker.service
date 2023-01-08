@@ -1,0 +1,14 @@
+[Unit]
+Description=ADSB Telegram Notifier
+
+[Service]
+User=root
+Type=simple
+Restart=always
+RestartSec=20
+ExecStart=/usr/local/bin/php -f /usr/src/myapp/notifier.php
+StandardOutput=tty
+StandardError=tty
+
+[Install]
+WantedBy=default.target
