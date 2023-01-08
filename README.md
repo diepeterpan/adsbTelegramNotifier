@@ -85,7 +85,11 @@ Create docker image (NEEDS TO CHANGE TO WORK WITH SERVICE INSTEAD OF CRON, TODO 
 
 `docker build -t adsbtelegramnotify .`
 
-a Docker compose file is provided as an example of running this as a stack in e.g. Portainer. The example file maps in the config file as well as the decoded ADS-B file location.
+a Docker compose file is provided as an example of running this as a stack in e.g. Portainer. 
+The example compose file maps in the `config.php` file as well as the decoded ADS-B file location.
+With a container there is no need to:
+- install dependencies in section [Dependencies]
+- configure the systemd service in section [Automatic notifications]
 
 ## Contribute
 If you want to contribute to the project, you are welcome to do the translations into your local language. But no matter what you want to contribute, just send a PR and I'll take a look at it.
