@@ -81,7 +81,7 @@ Restart readsb:
 `sudo systemctl restart readsb`
 
 ## Docker
-Create docker image
+Create docker image (NEEDS TO CHANGE TO WORK WITH SERVICE INSTEAD OF CRON, TODO FOR LATER TODAY ;-)
 
 `docker build -t adsbtelegramnotify .`
 
