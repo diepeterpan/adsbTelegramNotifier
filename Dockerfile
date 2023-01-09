@@ -1,3 +1,4 @@
+# docker build -t adsbtelegramnotify .
 FROM php
 LABEL maintainer "Die Peter Pan <diepeterpan@gmail.com>"
 
