@@ -393,7 +393,7 @@ while(1) {
   if($usleep <= 0) {
     continue;
   } else {
-    usleep(floor($usleep));
+    usleep($usleep);
   }
 }
 ?>
